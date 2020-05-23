@@ -6,13 +6,16 @@
     <title>Matrix v1</title>
 </head>
 <body style="padding: 0px;margin: 0px;">
+
     <div id="music_div">
 
     </div>
     <div id="canvas_div">
         <canvas id="matrix_canvas" style="display:none;"></canvas>
     </div>
-
+    <div id="face" style="position: absolute;top:0px;left:0px;width:99vw;height:99vh;display: flex;justify-content: center;align-items: center;z-index: -999999999;">
+        <div id="text_face" style="position: absolute;display:none;justify-content: center;align-items: center;color:rgb(0, 200, 1);font-weight: bolder;font-size: large;" >¯\_(ツ)_/¯</div>
+    </div>
     <button id="start_btn">Начать</button>
     <script>
 
@@ -64,7 +67,9 @@
             myAudio.src = "matrix_music.mp3";
             myAudio.play();
             setTimeout(stop_matrix,158000)
-            function stop_matrix(){
+
+        }
+        function stop_matrix(){
             matrix_do==false
             canvas_div.innerHTML=""
             music_div.innerHTML=""
@@ -72,7 +77,7 @@
 
             matrix_canvas.style.display="none"
             console.log("Matrix end")
-        }
+            text_face.style.display="flex"
         }
     </script>
 </body>
