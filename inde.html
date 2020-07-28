@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ljjrvn</title>
+</head>
+<body>
+    <button id="dsds">press</button>
+    <script>
+        dsds.onclick=function(){
+            var speack_audio = document.createElement("audio");
+                //talk_back.appendChild(speack_audio)
+                speack_audio.setAttribute('loop',true)
+                //speack_audio.setAttribute('muted',true)
+                //speack_audio.volume=background_volume
+                speack_audio.src = "mus.mp3";
+                speack_audio.play();
+        }
+                
+    </script>
+</body>
+</html>
